@@ -10,9 +10,9 @@
 
 
 #### level 11:
-* A symbolic link is a type of file that is a reference to another file.
+* <b>A symbolic link is a type of file that is a reference to another file.
 Create a symbolic link named take-the-command-challenge that points to the file 
-tmp/files/take-the-command-challenge.
+tmp/files/take-the-command-challenge</b>.
 
 *  <p>You can use the command 'ln -s' to create a symbolic link.This is a special
     type of file that points to another file or dir.
@@ -25,75 +25,82 @@ tmp/files/take-the-command-challenge.
 >`ln tmp/files/take-the-command-challenge take-the-command-challenge`
 
 #### level 12: 
-Delete all of the files in this challenge directory including all subdirectories 
+<b>Delete all of the files in this challenge directory including all subdirectories 
 and their contents.
     Hint: There are files and directories that start with a dot ".", 
-    "rm -rf *" won't work here!
+    "rm -rf *" won't work here!</b>
 
 * This command will recursively search for files and directories starting
 from the current dir and delete them.This command will delete all the files
 and dirs including the hidden ones & the curent directory that you are
 running the command from.
-'''
+```
 find . -delete
-'''
+```
 
-3. There are files in this challenge with different file extensions.
+#### level 13: 
+* <b>There are files in this challenge with different file extensions.
     Remove all files with the .doc extension recursively in the 
-    current working directory.
+    current working directory.</b>
 
 * This command will find all the files with the extension ".doc" in the
 current working dir and all subdir and delete them.The '-name' option is
 used to search files with a specific name pattern and '-delete' option is
 used to delete the files that are found.
-'''
+```
 find . -name ".doc" -delete
-'''
+```
 
-4. There is a file named access.log in the current working directory. 
-Print all lines in this file that contains the string "GET".
+#### level 14:
+* <b>There is a file named access.log in the current working directory. 
+Print all lines in this file that contains the string "GET".</b>
 
-'''
+```
 grep "GET" access.log
-'''
+```
 
-5. Print all files in the current directory, one per line (not the path
-just the filename) that contain the string "500".
+#### level 15:
+<b>Print all files in the current directory, one per line (not the path
+just the filename) that contain the string "500".</b>
 
-'''
+```
 grep -l '500' *
-'''
+```
 
-6. Print the relative file paths, one path per line for all filenames 
-that start with "access.log" in the current directory.
+#### level 16:
+<b>Print the relative file paths, one path per line for all filenames 
+that start with "access.log" in the current directory.</b>
 
 * This command uses 'find' to search for all files in current dir(.) whose
 name starts with "access.log"('-name "access.log"') then uses 
 '-printf "%P\n' to print the relative path of each file found.
-'''
+```
 find . -name "access.log" -printf "%P\n"
-'''
+```
 
 [![](https://cmdchallenge.com/img/emojis/1F577.png)]()
 
-7. Print all matching lines (without the filename or the file path) in all 
+#### level 17:
+<b>Print all matching lines (without the filename or the file path) in all 
 files under the current directory that start with "access.log" that 
 contain the string "500".
-
 Note that there are no files named access.log in the current directory, 
-you will need to search recursively.
+you will need to search recursively.</b>
 
 * this command will list all files and directories in the current dir, and
 pipe that output to 'grep'.'grep' will then search for string "500" recursively
 in the current dir('-r') and only print the matched file or directory
 names('-h')
 
-'ls | grep -rh 500'
+```
+ls | grep -rh 500
+```
 
 [![](https://cmdchallenge.com/img/emojis/1F982.png)]()
 
-8. Extract all IP addresses from files that start with "access.log" 
-printing one IP address per line.
+#### level 18:
+<b>Extract all IP addresses from files that start with "access.log" 
+printing one IP address per line.</b>
 
 * grep - a command-line tool that searches for patterns in text.
 * '-r' - option tells grep to search recursively in subdirectories.
@@ -115,14 +122,15 @@ prints out only the matching parts of the line which are IP addresses and it
 will only match the IP addresses which are word bounded by whitespace or 
 punctuation.
 
-'''
+```
 grep -rOE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
-'''
+```
 
 [![](https://cmdchallenge.com/img/emojis/1FAB0.png)]()
 
-9. Count the number of files in the current working directory. 
-Print the number of files as a single integer.
+#### level 19:
+<b>Count the number of files in the current working directory. 
+Print the number of files as a single integer.</b>
 
 This command uses a combination of 'find' and 'wc' commands to achieve
 this:
@@ -132,6 +140,6 @@ this:
     * <b>'wc --lines'</b>  counts the number of lines from the output of 
         'find' command which are files, and it will print the number of files
         as a single integer
-'''
+```
 find . -type f | wc --lines
-'''
+```
