@@ -8,7 +8,7 @@
 
 ## 2. Reach the perfect cube, 27
 
-
+[![](https://cmdchallenge.com/img/emojis/1F421.png)]()
 #### level 11:
 * <b>A symbolic link is a type of file that is a reference to another file.
 Create a symbolic link named take-the-command-challenge that points to the file 
@@ -24,6 +24,7 @@ tmp/files/take-the-command-challenge</b>.
 
 >`ln tmp/files/take-the-command-challenge take-the-command-challenge`
 
+[![](https://cmdchallenge.com/img/emojis/1F43A.png)]()
 #### level 12: 
 <b>Delete all of the files in this challenge directory including all subdirectories 
 and their contents.
@@ -38,6 +39,7 @@ running the command from.
 find . -delete
 ```
 
+[![](https://cmdchallenge.com/img/emojis/1F41D.png)]()
 #### level 13: 
 * <b>There are files in this challenge with different file extensions.
     Remove all files with the .doc extension recursively in the 
@@ -51,6 +53,7 @@ used to delete the files that are found.
 find . -name ".doc" -delete
 ```
 
+[![](https://cmdchallenge.com/img/emojis/1F41E.png)]()
 #### level 14:
 * <b>There is a file named access.log in the current working directory. 
 Print all lines in this file that contains the string "GET".</b>
@@ -59,6 +62,7 @@ Print all lines in this file that contains the string "GET".</b>
 grep "GET" access.log
 ```
 
+[![](https://cmdchallenge.com/img/emojis/1F997.png)]()
 #### level 15:
 <b>Print all files in the current directory, one per line (not the path
 just the filename) that contain the string "500".</b>
@@ -67,6 +71,7 @@ just the filename) that contain the string "500".</b>
 grep -l '500' *
 ```
 
+[![](https://cmdchallenge.com/img/emojis/1F577.png)]()
 #### level 16:
 <b>Print the relative file paths, one path per line for all filenames 
 that start with "access.log" in the current directory.</b>
