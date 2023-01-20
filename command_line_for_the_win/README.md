@@ -7,9 +7,9 @@
 * Complete the 9 next tasks, getting to 18 total.
 
 ## 2. Reach the perfect cube, 27
-* Complete the 9 next tasks, getting to 27 total.
 
-1. A symbolic link is a type of file that is a reference to another file.
+
+#### 1. A symbolic link is a type of file that is a reference to another file.
 
 Create a symbolic link named take-the-command-challenge that points to the file 
 tmp/files/take-the-command-challenge.
@@ -19,13 +19,12 @@ tmp/files/take-the-command-challenge.
     It allows multiple paths to reference the same file or directory
     To create a symbolic link name "link-to-file" that points to the file
     "original-file"
-'''
-ln -s original-file link-to-file
 
-ln tmp/files/take-the-command-challenge take-the-command-challenge 
-'''
+>`ln -s original-file link-to-file`
 
-2. Delete all of the files in this challenge directory including all 
+>`ln tmp/files/take-the-command-challenge take-the-command-challenge`
+
+#### level 12: Delete all of the files in this challenge directory including all 
     subdirectories and their contents.
     Hint: There are files and directories that start with a dot ".", 
     "rm -rf *" won't work here!
