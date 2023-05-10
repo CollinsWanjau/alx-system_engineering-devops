@@ -18,7 +18,7 @@ if __name__ == '__main__':
     for user in users:
         user_id = user.get('id')
         username = user.get('username')
-        url = "https://jsonplaceholder.typicode.com/users"
+        url = "https://jsonplaceholder.typicode.com/users/{}".format(user_id)
         url = url + '/todos/'
         response = requests.get(url)
         tasks = response.json()
