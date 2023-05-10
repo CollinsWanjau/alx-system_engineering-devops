@@ -6,19 +6,20 @@ Using reddit's API
 import requests
 after = None
 
+
 def recurse(subreddit, hot_list=[]):
     """
-    returns a list containing the titles of all hot articles for a given 
-    subreddit. 
-    If no results are found for the given subreddit, the function should 
+    returns a list containing the titles of all hot articles for a given
+    subreddit.
+    If no results are found for the given subreddit, the function should
     return None.
     """
     global after
-    user_agent = {'User-agent':'Google Chrome Version 111.0.5563.64'}
+    user_agent = {'User-agent': 'Google Chrome Version 111.0.5563.64'}
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     parameters = {'after': after}
     results = requests.get(url, params=parameters, headers=user_agent,
-            allow_redirects=False)
+                           allow_redirects=False)
 
     if results.status_code == 200:
         after_data = results.json().get('data').get('after')
