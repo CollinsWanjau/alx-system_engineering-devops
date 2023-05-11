@@ -13,7 +13,9 @@ def count_words(subreddit, word_list, after="", count=[]):
         count = [0] * len(word_list)
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    request = requests.get(url, params={'after': after}, allow_redirects=False, headers={'user-agent': 'Google Chrome Version 111.0.5563.64'})
+    request = requests.get(url, params={'after': after},
+                           allow_redirects=False,
+                           headers={'user-agent': 'colloso'})
 
     if request.status_code == 200:
         data = request.json()
@@ -35,7 +37,9 @@ def count_words(subreddit, word_list, after="", count=[]):
 
             for i in range(len(word_list)):
                 for j in range(i, len(word_list)):
-                    if (count[j] > count[i] or (word_list[i] > word_list[j] and count[j] == count[i])):
+                    if (count[j] > count[i] or
+                            (word_list[i] > word_list[j] and
+                                count[j] == count[i])):
                         aux = count[i]
                         count[i] = count[j]
                         count[j] = aux
