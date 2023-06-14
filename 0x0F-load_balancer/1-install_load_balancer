@@ -35,13 +35,13 @@ defaults
   timeout http-request 10s
 
 frontend colloso-frontend
-    bind *:8080
+    bind *:80
     default_backend colloso-backend
 
 backend colloso-backend
     balance roundrobin
-    server 99556-web-01	100.25.161.158:8080 check
-    server 99556-web-02 52.72.9.18:8080 check
+    server 99556-web-01	100.25.161.158:80 check
+    server 99556-web-02 52.72.9.18:80 check
 "
 
 # shellcheck disable=SC2154
