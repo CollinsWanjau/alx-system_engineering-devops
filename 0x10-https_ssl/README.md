@@ -91,3 +91,4 @@ sylvain@ubuntu$ curl https://www.holberton.online
 Holberton School for the win!
 sylvain@ubuntu$
 ```
+[solution](1-haproxy_ssl_termination)
