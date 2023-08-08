@@ -10,7 +10,7 @@ after = None
 def recurse(subreddit, hot_list=[]):
     """
     returns a list containing the titles of all hot articles for a given
-    subreddit.
+    subreddit recursively.
     If no results are found for the given subreddit, the function should
     return None.
     """
